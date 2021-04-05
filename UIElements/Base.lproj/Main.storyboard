@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Hd0-Qu-Don">
-                                        <rect key="frame" x="8" y="545.5" width="320" height="162"/>
+                                        <rect key="frame" x="8" y="546" width="320" height="162"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="162" id="EwW-Rr-Lhu"/>
                                         </constraints>
@@ -71,14 +72,32 @@
                                             <action selector="changeDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="ekB-EF-mUn"/>
                                         </connections>
                                     </datePicker>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gRL-84-GNt">
+                                        <rect key="frame" x="230" y="735" width="51" height="30.5"/>
+                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                        <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                                        <connections>
+                                            <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="KLq-nr-kK3"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скрыть все элементы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwc-2F-kx5">
+                                        <rect key="frame" x="8" y="735" width="214" height="30.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Hd0-Qu-Don" firstAttribute="top" secondItem="SN1-Fd-GHy" secondAttribute="bottom" constant="52" id="137-ny-h7R"/>
                                     <constraint firstItem="DuQ-JK-vj2" firstAttribute="trailing" secondItem="3Uz-e4-EPF" secondAttribute="trailing" id="2DM-zg-Azw"/>
                                     <constraint firstItem="Hd0-Qu-Don" firstAttribute="leading" secondItem="LPw-Rs-NIU" secondAttribute="leading" constant="8" id="5Yc-e5-hGA"/>
                                     <constraint firstItem="SN1-Fd-GHy" firstAttribute="top" secondItem="3Uz-e4-EPF" secondAttribute="bottom" constant="77" id="66t-Di-KAl"/>
+                                    <constraint firstItem="gRL-84-GNt" firstAttribute="top" secondItem="Hd0-Qu-Don" secondAttribute="bottom" constant="27.5" id="6EU-Qh-QBV"/>
                                     <constraint firstAttribute="trailing" secondItem="Hd0-Qu-Don" secondAttribute="trailing" constant="-8" id="7Io-tC-tz6"/>
+                                    <constraint firstAttribute="bottom" secondItem="gwc-2F-kx5" secondAttribute="bottom" constant="49" id="BgK-GO-GOG"/>
                                     <constraint firstAttribute="bottom" secondItem="Hd0-Qu-Don" secondAttribute="bottom" constant="107" id="GSP-4W-Px1"/>
+                                    <constraint firstItem="gwc-2F-kx5" firstAttribute="top" secondItem="Hd0-Qu-Don" secondAttribute="bottom" constant="27.5" id="HHF-Ve-BdE"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRL-84-GNt" secondAttribute="trailing" constant="41" id="Sb1-Tm-Nxf"/>
                                     <constraint firstItem="DuQ-JK-vj2" firstAttribute="leading" secondItem="3Uz-e4-EPF" secondAttribute="leading" id="TUy-iT-iHn"/>
                                     <constraint firstItem="I4t-I4-m6f" firstAttribute="leading" secondItem="LPw-Rs-NIU" secondAttribute="leading" constant="70" id="ULH-xz-zOA"/>
                                     <constraint firstItem="gzZ-l5-at8" firstAttribute="top" secondItem="I4t-I4-m6f" secondAttribute="bottom" constant="94" id="Xau-ku-GdB"/>
@@ -88,10 +107,13 @@
                                     <constraint firstItem="3Uz-e4-EPF" firstAttribute="top" secondItem="DuQ-JK-vj2" secondAttribute="bottom" constant="91" id="eld-ji-GcM"/>
                                     <constraint firstItem="3Uz-e4-EPF" firstAttribute="leading" secondItem="SN1-Fd-GHy" secondAttribute="leading" id="fen-NI-udb"/>
                                     <constraint firstItem="DuQ-JK-vj2" firstAttribute="top" secondItem="gzZ-l5-at8" secondAttribute="bottom" constant="71" id="lET-7G-EVX"/>
+                                    <constraint firstAttribute="bottom" secondItem="gRL-84-GNt" secondAttribute="bottom" constant="49" id="nzY-EG-myX"/>
                                     <constraint firstItem="DuQ-JK-vj2" firstAttribute="centerX" secondItem="LPw-Rs-NIU" secondAttribute="centerX" id="oQN-dH-vXu"/>
+                                    <constraint firstItem="gwc-2F-kx5" firstAttribute="leading" secondItem="LPw-Rs-NIU" secondAttribute="leading" constant="8" id="qPQ-k6-3Eo"/>
                                     <constraint firstItem="gzZ-l5-at8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LPw-Rs-NIU" secondAttribute="trailingMargin" id="sn2-fm-wro"/>
                                     <constraint firstItem="I4t-I4-m6f" firstAttribute="top" secondItem="LPw-Rs-NIU" secondAttribute="top" constant="20" id="sth-pW-fSQ"/>
                                     <constraint firstItem="gzZ-l5-at8" firstAttribute="centerX" secondItem="LPw-Rs-NIU" secondAttribute="centerX" id="ueZ-zM-aZR"/>
+                                    <constraint firstItem="gRL-84-GNt" firstAttribute="leading" secondItem="gwc-2F-kx5" secondAttribute="trailing" constant="8" symbolic="YES" id="v5I-v5-nuk"/>
                                     <constraint firstItem="I4t-I4-m6f" firstAttribute="centerX" secondItem="LPw-Rs-NIU" secondAttribute="centerX" id="znt-a5-Ixo"/>
                                 </constraints>
                             </scrollView>
@@ -108,15 +130,25 @@
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="datePicker" destination="Hd0-Qu-Don" id="KvX-wa-VRC"/>
+                        <outlet property="doneButton" destination="SN1-Fd-GHy" id="nqM-cP-wP7"/>
                         <outlet property="label" destination="gzZ-l5-at8" id="PMr-R9-EwB"/>
                         <outlet property="segmentedControl" destination="I4t-I4-m6f" id="cg7-xx-oge"/>
                         <outlet property="slider" destination="DuQ-JK-vj2" id="CTm-dA-GF2"/>
+                        <outlet property="switchLabel" destination="gwc-2F-kx5" id="x3V-7t-MBi"/>
                         <outlet property="textField" destination="3Uz-e4-EPF" id="5jg-kw-tzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.484257871064472"/>
+            <point key="canvasLocation" x="32.608695652173914" y="31.473214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
